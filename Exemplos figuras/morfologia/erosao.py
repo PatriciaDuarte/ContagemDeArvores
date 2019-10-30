@@ -2,8 +2,12 @@ import cv2
 import numpy as np
 
 imagem = cv2.imread('manga1.png',0)
+
+# global thresholding
+ret1,th1 = cv2.threshold(imagem,127,255,cv2.THRESH_BINARY)
+
 kernel = np.ones((5,5),np.uint8)
-erosion = cv2.erode(imagem,kernel,iterations = 1)
+erosion = cv2.erode(th1,kernel,iterations = 1)
 
 # Escreve o nome do filtro na imagem correspondente
 font = cv2.FONT_HERSHEY_SIMPLEX
