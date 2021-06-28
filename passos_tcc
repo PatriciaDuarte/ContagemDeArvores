@@ -1,0 +1,19 @@
+-Identificação da base de ground truth (Caçar o artigo que tem ela)
+-Extração de recortes da imagem de ground truth em pedaços
+-Extração de mini-janelas dividindo em classes de centro e não centro das árvores
+-Extração de características por meio do HOG, foi testado o GLCM. 
+-Lê o arquivo, guarda e o classificador naive bayes lê o arquivo que foi salvo
+-KNN (70% de treinamento e 30 de testes)
+-541 amostras de centro e 630 de não centro das árvores
+-Testes com LDA, não teve bons resultados.
+-Na etapa do classificador Naive Bayes:
+	-Extrair uma janela centrada nos pixels do mesmo tamanho das amostras de treinamento.
+	-Aplicar o extrator de características correspondente a janela extraída.
+	-Aplicar o classificador ao vetor de características extraído.
+	-Colocar o resultado de classificação(0 ou 1) em uma imagem vazia na mesma posição dos 
+	pixels de onde foi extraída a janela. 
+-Testou abertura.
+-Eliminou objetos pequenos
+-Rotular e obter a quantidade de objetos
+-Obter centros dos objetos e plotar na imagem
+-Aplicou medidas de precisão
